@@ -1,9 +1,14 @@
-import React from 'react';
+import { useSelector } from 'react-redux';
+import { RootState } from 'store/store';
+import InputComponent from './components/InputComponent';
 
 function App() {
+
+  const state = useSelector((state:RootState) => state)
+
   return (
     <div className="App">
-      Hello World !
+      <InputComponent state={state}/>
     </div>
   );
 }
